@@ -2,12 +2,12 @@ $color-primary:#ffff;
 $color-primary-2:#fdf6eb;
 $color-secondary:#4d13d1;
 $border:#0000;
-$font-primary: Handlee, "sans-serif";
-$font-secondary: Handlee, "sans-serif";
+$font-primary: Lato, "sans-serif";
+$font-secondary: "sans-serif";
 
-$bp-larger-screen: 93.75em;
+$bp-larger-screen: 96.9em;
 // 1500px
-$bp-large-screen:0em;
+$bp-large-screen: 85.6250em;
 // 1370px
 $bp-small-screen:79.7em;
 // 1270px
@@ -15,15 +15,18 @@ $bp-tab1:68.125em;
 // 1090px
 $bp-tab-2:59.375em;
 // 950px
-$bp-tab2:43.75em;
-// 600px
+$bp-tab2:68.75em;
+// $bp-tab2:43.75em;
+// 700px
 
 
 
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-    
+    @media only screen and (max-width:$bp-larger-screen){
+        font: size 60%;
+    }
 
     @media only screen and (max-width:$bp-small-screen){
         font: size 55%;
@@ -31,14 +34,15 @@ html{
     @media only screen and (max-width:$bp-tab1){
         font: size 45%;
     }
-    @media only screen and (max-width:$bp-tab2){
+   
+    @media only screen and (max-width:$bp-tab-2){
         font: size 40%;
     }
-    @media only screen and (max-width:$bp-tab-2){
-        font: size 20%;
+
+    @media only screen and (max-width:$bp-tab2){
+        font: size 30%;
     }
 }
-
 body{
     display: grid;
     grid-template-columns: repeat(auofit, minmax(100px, 1fr));
@@ -52,6 +56,5 @@ body{
     }
 }
 
-.container{
-    height: 100vh;
-}
+// .container{
+//     height: 100vh;

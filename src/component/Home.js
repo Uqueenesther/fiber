@@ -1,5 +1,45 @@
 import '../App.scss';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+}
+
 
 function Home() {
   return (
@@ -17,6 +57,7 @@ function Home() {
         <div className=' nav register'>
         <h4 className='heading__3'> <a href='http://localhost:3000/' className='nav__link sign'>Sign In</a></h4>
         <button className='btn'><Link to="/signup" className='btn__link'>Sign Up</Link> </button>
+       
         </div>
         </div>
 
@@ -25,7 +66,7 @@ function Home() {
            <div className="hamburger1">
              <input id="toggle" type="checkbox"/>
 
-                <label for="toggle" className="hamburger">
+                <label htmlFor ="toggle" className="hamburger">
                      <div className="top-bun"></div>
                      <div className="meat"></div>
                      <div className="bottom-bun"></div>
@@ -105,8 +146,10 @@ function Home() {
         <h4>Why fiber ?</h4>
         <h2 className='heading__2'>A good portfolio means good employability</h2>
         </div>
+        
          
         <div className='features__use'>
+          
           <div className='features__icon'>
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M21.6666 20L20.52 13.3333H19.505L18.3333 20C17.34 20.5783 16.6666 21.64 16.6666 22.8717C16.6666 24.7117 18.16 26.205 20 26.205C21.84 26.205 23.3333 24.7117 23.3333 22.8717C23.3333 21.64 22.66 20.5783 21.6666 20ZM20 6.66667C10.7966 6.66667 3.33331 14.1283 3.33331 23.3333C3.33331 32.5383 10.7966 40 20 40C29.2033 40 36.6666 32.5383 36.6666 23.3333C36.6666 14.1283 29.2033 6.66667 20 6.66667ZM20 36.6667C12.6483 36.6667 6.66665 30.685 6.66665 23.3333C6.66665 15.9817 12.6483 10 20 10C27.3516 10 33.3333 15.9817 33.3333 23.3333C33.3333 30.685 27.3516 36.6667 20 36.6667ZM16.6666 3.635V0H23.3333V3.635C20.9366 3.23 19.0133 3.23833 16.6666 3.635ZM31.965 7.345L34.31 5L36.6666 7.35667L34.465 9.55833C33.695 8.75167 32.8583 8.015 31.965 7.345ZM10.8333 23.3333C10.8333 23.7933 10.46 24.1667 9.99998 24.1667C9.53998 24.1667 9.16665 23.7933 9.16665 23.3333C9.16665 22.8733 9.53998 22.5 9.99998 22.5C10.46 22.5 10.8333 22.8733 10.8333 23.3333ZM30.8333 23.3333C30.8333 23.7933 30.46 24.1667 30 24.1667C29.54 24.1667 29.1666 23.7933 29.1666 23.3333C29.1666 22.8733 29.54 22.5 30 22.5C30.46 22.5 30.8333 22.8733 30.8333 23.3333ZM20.8333 33.3333C20.8333 33.7933 20.46 34.1667 20 34.1667C19.54 34.1667 19.1666 33.7933 19.1666 33.3333C19.1666 32.8733 19.54 32.5 20 32.5C20.46 32.5 20.8333 32.8733 20.8333 33.3333ZM14.1666 30C14.1666 30.46 13.7933 30.8333 13.3333 30.8333C12.8733 30.8333 12.5 30.46 12.5 30C12.5 29.54 12.8733 29.1667 13.3333 29.1667C13.7933 29.1667 14.1666 29.54 14.1666 30ZM27.5 30C27.5 30.46 27.1266 30.8333 26.6666 30.8333C26.2066 30.8333 25.8333 30.46 25.8333 30C25.8333 29.54 26.2066 29.1667 26.6666 29.1667C27.1266 29.1667 27.5 29.54 27.5 30ZM14.1666 15C14.1666 15.46 13.7933 15.8333 13.3333 15.8333C12.8733 15.8333 12.5 15.46 12.5 15C12.5 14.54 12.8733 14.1667 13.3333 14.1667C13.7933 14.1667 14.1666 14.54 14.1666 15ZM27.5 15C27.5 15.46 27.1266 15.8333 26.6666 15.8333C26.2066 15.8333 25.8333 15.46 25.8333 15C25.8333 14.54 26.2066 14.1667 26.6666 14.1667C27.1266 14.1667 27.5 14.54 27.5 15Z" fill="#4D13D1"/>
@@ -146,26 +189,11 @@ function Home() {
             </figure> 
         </div>
 
-        <div className='features__reviews'>
-           <div  className='features__profile'>
-           <div className='features__story'>
-           <img  src='img/Avatar.svg' alt='avatar' className='features__avatar'/>
-           <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
-            </div>
-            <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
-            <button className='btn features__btn-2'>View Sarah's portfolio</button>
-           </div>
-
-           <div  className='features__profile'>
-           <div className='features__story'>
-             <img  src='img/Avatar 2.svg' alt='avatar' className='features__avatar'/>
-             <p> <h4 className='features__heading'>Matthew's Higgins</h4> $20k in revenue</p>
-            </div>
-            <p className='para'>I have been getting A LOT of leads ever since i used Fiber's premade templates, now i just need to work on my case studies and i'll be ready to go!</p>
-            <button className='btn features__btn-2'>View Sarah's portfolio</button>
-           </div>
-
-           <div  className='features__profile'>
+       <div className='features__reviews' >
+        
+        <Slider {...sliderSettings} >
+          <div className='case'>
+          <div  className='features__profile'>
            <div className='features__story'>
              <img  src='img/Avatar 32.svg' alt='avatar' className='features__avatar'/> 
              <p> <h4 className='features__heading'>Janice Dave</h4> $120k in revenue</p>
@@ -173,7 +201,65 @@ function Home() {
             <p className='para'>I only just started freelancing this month and have already made more than i ever made in my full-time job.the templates are so amazing.</p>
             <button className='btn  features__btn-2'>View janice's portfolio</button>
            </div>
-        </div>
+          </div>
+
+          <div  className='case'> 
+            <div  className='features__profile'>
+            <div className='features__story'>
+            <img  src='img/Avatar.svg' alt='avatar' className='features__avatar'/>
+            <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
+              </div>
+              <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
+              <button className='btn features__btn-2'>View Sarah's portfolio</button>
+            </div> 
+          </div>
+
+          <div  className='case'>
+              <div  className='features__profile'>
+              <div className='features__story'>
+                <img  src='img/Avatar 2.svg' alt='avatar' className='features__avatar'/>
+                <p> <h4 className='features__heading'>Matthew's Higgins</h4> $20k in revenue</p>
+                </div>
+                <p className='para'>I have been getting A LOT of leads ever since i used Fiber's premade templates, now i just need to work on my case studies and i'll be ready to go!</p>
+                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+              </div>
+          </div>
+
+          <div  className='case'>
+               <div  className='features__profile'>
+               <div className='features__story'>
+                <img  src='img/Avatar 2.svg' alt='avatar' className='features__avatar'/>
+                <p> <h4 className='features__heading'>Matthew's Higgins</h4> $20k in revenue</p>
+                </div>
+                <p className='para'>I have been getting A LOT of leads ever since i used Fiber's premade templates, now i just need to work on my case studies and i'll be ready to go!</p>
+                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+              </div>
+          </div>
+
+          <div  className='case'>
+             <div  className='features__profile'>
+             <div className='features__story'>
+              <img  src='img/Avatar.svg' alt='avatar' className='features__avatar'/>
+              <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
+              </div>
+              <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
+              <button className='btn features__btn-2'>View Sarah's portfolio</button>
+            </div> 
+          </div>
+
+          <div  className='case'>
+            <div  className='features__profile'>
+              <div className='features__story'>
+              <img  src='img/Avatar.svg' alt='avatar' className='features__avatar'/>
+              <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
+                </div>
+                <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
+                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+              </div> 
+          </div>
+          </Slider>
+       </div>
+            
        
       </section>
 
@@ -231,5 +317,4 @@ function Home() {
 }
 
 export default Home;
-
 
