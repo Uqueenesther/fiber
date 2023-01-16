@@ -1,8 +1,6 @@
 // HEADER
 
-.header{
-   
-}
+
 .deskheader{
     display: flex;
     align-items: center;
@@ -31,11 +29,6 @@
     &__list{
         display: flex;
         list-style: none;
-    }
-
-    &__items{
-       
-   
     }
 
     &__link{
@@ -97,8 +90,7 @@
 
     &:active,
         &:focus{
-            transform: translateY(-1px);
-            box-shadow: 0 .5rem 1rem rgb(#4d13d1, .2); 
+            transform: translateY(-1px);  
         }
    
 }
@@ -195,14 +187,14 @@
        
     }
 }
-.text-con{
+// .text-con{
   
-}
+// }
 
 
-.link-view{
+// .link-view{
 
-}
+// }
 .check__con{
     display: flex;
     gap: 2rem;
