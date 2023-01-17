@@ -402,7 +402,7 @@
         &:active{
             outline: none;
             transform: translateY(-1px);
-            box-shadow: 0 .5rem 1rem rgb(black , .2); 
+    
         }
     }
 
@@ -505,7 +505,7 @@
         &:focus{
             outline: none;
             border-bottom: 5px solid #4d13d1;
-            box-shadow: 0 1rem 2rem rgba(black, .1);
+            // box-shadow: 0 1rem 2rem rgba(black, .1);
         }
     }
 
