@@ -56,7 +56,7 @@ function Home() {
         </nav>
         <div className=' nav register'>
         <h4 className='heading__3'> <a href='http://localhost:3000/' className='nav__link sign'>Sign In</a></h4>
-        <button className='btn'><Link to="/signup" className='btn__link'>Sign Up</Link> </button>
+        <button className='btn__signup'><Link to="/signup" className='btn__link'>Sign Up</Link> </button>
        
         </div>
         </div>
@@ -113,7 +113,7 @@ function Home() {
               <h2 className='heading__2'> Create your portfolio in minutes.</h2>
               <p className='para'>With Fiber, you can setup your own personal portfolio in minutes with dozens of premade, beautiful templates</p>
             <div className='linkbtn'>
-            <button className='btn btnview'>Start free Trial</button>
+             <span className='btn '>Start Free Trial</span>
               <h4><a href='http://localhost:3000/'  className='link-view'> View Examples</a></h4>
             </div>
           </div>
@@ -199,7 +199,7 @@ function Home() {
              <p> <h4 className='features__heading'>Janice Dave</h4> $120k in revenue</p>
             </div>
             <p className='para'>I only just started freelancing this month and have already made more than i ever made in my full-time job.the templates are so amazing.</p>
-            <button className='btn  features__btn-2'>View janice's portfolio</button>
+            <button className=' features__btn-2'>View janice's portfolio</button>
            </div>
           </div>
 
@@ -210,7 +210,7 @@ function Home() {
             <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
               </div>
               <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
-              <button className='btn features__btn-2'>View Sarah's portfolio</button>
+              <button className=' features__btn-2'>View Sarah's portfolio</button>
             </div> 
           </div>
 
@@ -221,7 +221,7 @@ function Home() {
                 <p> <h4 className='features__heading'>Matthew's Higgins</h4> $20k in revenue</p>
                 </div>
                 <p className='para'>I have been getting A LOT of leads ever since i used Fiber's premade templates, now i just need to work on my case studies and i'll be ready to go!</p>
-                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+                <button className=' features__btn-2'>View Sarah's portfolio</button>
               </div>
           </div>
 
@@ -232,7 +232,7 @@ function Home() {
                 <p> <h4 className='features__heading'>Matthew's Higgins</h4> $20k in revenue</p>
                 </div>
                 <p className='para'>I have been getting A LOT of leads ever since i used Fiber's premade templates, now i just need to work on my case studies and i'll be ready to go!</p>
-                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+                <button className=' features__btn-2'>View Sarah's portfolio</button>
               </div>
           </div>
 
@@ -243,7 +243,7 @@ function Home() {
               <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
               </div>
               <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
-              <button className='btn features__btn-2'>View Sarah's portfolio</button>
+              <button className=' features__btn-2'>View Sarah's portfolio</button>
             </div> 
           </div>
 
@@ -254,7 +254,7 @@ function Home() {
               <p> <h4 className='features__heading'>Sarah Andrews</h4> $130k in revenue</p>
                 </div>
                 <p className='para'>Setting up my portfolio with fiber toomk no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me  more than $130k</p>
-                <button className='btn features__btn-2'>View Sarah's portfolio</button>
+                <button className=' features__btn-2'>View Sarah's portfolio</button>
               </div> 
           </div>
           </Slider>
